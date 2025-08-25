@@ -19,8 +19,6 @@
 --color-accent: #ffcc70;
 }
 
-
-/* Global Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
 font-family: var(--font-main);
@@ -67,7 +65,7 @@ background: var(--header-bg);
   cursor: pointer;
 }
 
-/* Header Right Icons */
+
 .header-icons {
   display: flex;
   align-items: center;
@@ -83,7 +81,7 @@ background: var(--header-bg);
   transition: var(--transition);
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: center; 
@@ -95,7 +93,7 @@ background: var(--header-bg);
 }
 
 
-/* Shop by Brand Carousel */
+
 #shop-by-brand {
   position: relative;
   width: 100%;
@@ -127,7 +125,7 @@ background: var(--header-bg);
   height: 100%;
   object-fit: cover;
 }
-/* Carousel Animation */
+
 @keyframes autoRun {
   from { transform: perspective(1000px) rotateY(0deg); }
   to { transform: perspective(1000px) rotateY(360deg); }
