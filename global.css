@@ -129,7 +129,6 @@ background: var(--header-bg);
   height: 100%;
   object-fit: cover;
 }
-
 /* Carousel Animation */
 @keyframes autoRun {
   from { transform: perspective(1000px) rotateY(0deg); }
