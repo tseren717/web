@@ -83,8 +83,6 @@ background: var(--header-bg);
   transition: var(--transition);
 }
 
-
-
 /* Hero Section */
 .hero {
     display: flex;
