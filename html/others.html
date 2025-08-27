@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="mn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-thrift</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../css/categories.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+     <header class="header">
+      <div class="logo">
+        <a href="../index.html">
+        <span>Thrift Shop</span></a>
+      </div>
+    <!--Search heseg-->
+    <div class="search-container">
+      <input type="text" placeholder="Search...">
+      <span class="search-icon">🔍</span>
+    </div>
+    <!-- Right Icons -->
+     <div class="header-icons">
+      <span class="icon cart-icon" >Сагс</span>
+      <span class="icon user-icon">Бүртгэл</span>
+    </div>
+    
+    <button id="theme-toggle"> switch mode</button>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <h4>Бусад чимэглэл, хэрэгсэл</h4>
+  </section>
+
+  
+  <!-- Products Grid -->
+    <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="../pictures/category/busad/51.jpg" alt="NIKE SPORT SHORTS" class="product-image">
+            <div class="product-info">
+                <div class="product-price">149,000 </div>
+            </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="../pictures/category/busad/52.jpg" alt="TOMMY HILFIGER SPORT SHORTS" class="product-image">
+            <div class="product-info">
+                <div class="product-price">124,000 </div>
+            </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="../pictures/category/busad/53.jpg" alt="UNDER ARMOUR CARGO SHORTS" class="product-image">
+            <div class="product-info">
+                <div class="product-price">124,000</div>
+            </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+            <img src="../pictures/category/busad/54.jpg" alt="BASKETBALL NIKE SPORT SHORTS" class="product-image">
+            <div class="product-info">
+                <div class="product-price">173,000 </div>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <img src="../pictures/category/busad/55.jpg" alt="BASKETBALL NIKE SPORT SHORTS" class="product-image">
+            <div class="product-info">
+                <div class="product-price">173,000 </div>
+            </div>
+        </div>
+
+        <!-- Additional products can be added here following the same pattern -->
+    </div>
+
+    <script src="..js/categories.js"></script>
+
+
+<script>
+// Dark/Light toggle
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+document.documentElement.classList.toggle('dark');
+});
+</script>
+</body>
+</html>
