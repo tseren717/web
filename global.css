@@ -19,6 +19,8 @@
 --color-accent: #ffcc70;
 }
 
+
+/* Global Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
 font-family: var(--font-main);
@@ -72,7 +74,7 @@ background: var(--header-bg);
   cursor: pointer;
 }
 
-
+/* Header Right Icons */
 .header-icons {
   display: flex;
   align-items: center;
@@ -88,7 +90,7 @@ background: var(--header-bg);
   transition: var(--transition);
 }
 
-
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: center; 
@@ -106,7 +108,7 @@ background: var(--header-bg);
 }
 
 
-
+/* Shop by Brand Carousel */
 #shop-by-brand {
   position: relative;
   width: 100%;
@@ -138,12 +140,11 @@ background: var(--header-bg);
   height: 100%;
   object-fit: cover;
 }
-
+/* Carousel Animation */
 @keyframes autoRun {
   from { transform: perspective(1000px) rotateY(0deg); }
   to { transform: perspective(1000px) rotateY(360deg); }
 }
-<<<<<<< HEAD
 
 /* Category Section */
 .categories {
@@ -191,5 +192,3 @@ background: var(--header-bg);
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-=======
->>>>>>> 109b376367da2a2a57bdaf20d6ee55e2fce89c90
