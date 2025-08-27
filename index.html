@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html lang="mn">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>e-thrift</title>
-<link rel="stylesheet" href="global.css" />
-</head>
-<body>
-<!-- Header Section -->
-<header class="header">
-<div class="logo">
-    <span>Thrift Shop</span>
-</div>
-<!--Search heseg-->
- <div class="search-container">
-    <input type="text" placeholder="Search...">
-    <span class="search-icon">🔍</span>
-  </div>
-
-  <!-- Right Icons -->
-  <div class="header-icons">
-    <span class="icon cart-icon" >Сагс</span>
-    <span class="icon user-icon">Бүртгэл</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-thrift</title>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+     <header class="header">
+      <div class="logo">
+        <span>Thrift Shop</span>
+      </div>
+    <!--Search heseg-->
+    <div class="search-container">
+      <input type="text" placeholder="Search...">
+      <span class="search-icon">🔍</span>
+    </div>
+    <!-- Right Icons -->
+     <div class="header-icons">
+      <span class="icon cart-icon" >Сагс</span>
+      <span class="icon user-icon">Бүртгэл</span>
+    </div>
     
-  </div>
-
-<button id="theme-toggle"> switch mode</button>
-</header>
-
-
-<!-- Hero Section -->
-<section class="hero">
-<h4>Хямд хувцас, чанартай сонголт</h4>
-</section>
-
- <!-- Shop by Brand Carousel -->
+    <button id="theme-toggle"> switch mode</button>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <h4>Хямд үнэ, чанартай сонголт</h4>
+  </section>
+  
+  <!-- Shop by Brand Carousel -->
   <section id="shop-by-brand">
     <div class="slider">
-      <!-- 10 brand images -->
       <div class="item" style="--position:1; --quantity:10;"><img src="pictures/image1.jpg" alt="look 1"></div>
       <div class="item" style="--position:2; --quantity:10;"><img src="pictures/image2.jpg" alt="look 2"></div>
       <div class="item" style="--position:3; --quantity:10;"><img src="pictures/image3.jpg" alt="look 3"></div>
@@ -50,6 +46,49 @@
       <div class="item" style="--position:10; --quantity:10;"><img src="pictures/image10.jpg" alt="look 10"></div>
     </div>
   </section>
+
+  <!-- Shop by Category Section -->
+<section class="categories">
+  <h4>Ангилал</h4>
+  <div class="category-grid">
+    <div class="category-item">
+      <img src="pictures/category/jacket.jpg" alt="jacket">
+      <p>Гадуур хувцас</p>
+    </div>
+    <div class="category-item">
+      <img src="pictures/category/tsmts.jpg" alt="tsamts">
+      <p>Цамц</p>
+    </div>
+    <div class="category-item">
+      <img src="pictures/category/umd.jpg" alt="umd"></a><p>Өмд</p>
+    </div>
+    <div class="category-item">
+      <img src="pictures/category/gutal.jpg" alt="gutal">
+      <p>Гутал</p>
+    </div>
+    <div class="category-item">
+      <img src="pictures/category/busad.jpg" alt="busad">
+      <p>Бусад</p>
+    </div>
+    <div class="category-item">
+      <img src="pictures/category/brand.jpg" alt="brand">
+      <p>Брэнд</p>
+    </div>
+  </div>
+</section>
+
+<section class="map">
+            <h2>Дэлгүүрийн байршил</h2>
+            <div>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265.2808683695647!2d106.92847771537578!3d47.91967945398042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9693143a161c81%3A0xf1074a216491906d!2sNational%20University%20of%20Mongolia!5e0!3m2!1sen!2smn!4v1742997311296!5m2!1sen!2smn"
+                    style="border:0;" allowfullscreen="";
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+
 <!-- Footer -->
 <footer class="footer">
 <p>© 2025 Thrift Shop. Бүх эрх хуулиар хамгаалагдсан.</p>
