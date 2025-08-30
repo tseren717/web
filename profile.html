@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thrift Shop profile</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="post.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+  <!-- Header-->
+  <header class="header-top-nav">
+    <ul class="header-top">
+      <!--Logo container-->
+      <li class="logo-container">
+        <a class="logo" href="./index.html">
+          <span class="logo-text">Thrift Shop</span>
+        </a>
+      </li>
+      <!--Search container-->
+      <li class="search-box">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018" />
+          <path
+            d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+        </svg>
+        <input type="text" placeholder="Search...">
+      </li>
+      <!--Bell icon-->
+      <li class="icons">
+        <a href="">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
+          </svg>
+        </a>
+      </li>
+      <!--Heart icon-->
+      <li class="icons">
+        <a href="">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+          </svg>
+        </a>
+      </li>
+      <!--Plus icon-->
+      <li class="icons">
+        <a href="./form.html">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+            <path
+              d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+          </svg>
+        </a>
+      </li>
+      <!--Avatar icon-->
+      <li class="icons">
+        <a href="./profile.html">
+          <svg fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+            <path fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+  <!--Main-->
+  <section class="container">
+    <main class="profile-container">
+      <section class="profile-section">
+        <header class="profile-header">
+          <img class="profile-pic" id="profilePic" src="./pictures/profile/Profile.jpg" alt="profile picture">
+          <section class="profile-header-top">
+            <article class="profile-info">
+              <h3 class="full-name" id="fullName">kkk</h3>
+              <!-- Three Dots Icon -->
+              <div class="three-dots-wrapper">
+                <svg id="menuToggle" class="three-dots-icon" viewBox="0 0 16 16">
+                  <path
+                    d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                </svg>
+
+                <!-- Dropdown Menu -->
+                <div id="dropdownMenu" class="dropdown-menu">
+                  <a href="edit-profile.html" class="dropdown-item">Edit Profile</a>
+                  <a href="#" class="dropdown-item">Settings</a>
+                  <a href="#" class="dropdown-item">Log Out</a>
+                </div>
+              </div>
+
+              <h2 class="username" id="username">@Bilguunne</h2>
+            </article>
+            <article class="rate">
+              <div class="post-count"><span style="font-weight:bold">123</span> posts</div>
+              <div class="post-likes"><span style="font-weight:bold">123</span> likes</div>
+            </article>
+          </section>
+        </header>
+        <section class="bio-follow-container">
+          <article class="bio" id="bio">
+            <p>Hi guys</p>
+          </article>
+          <article class="follow-container">
+            <button class="btn">Followers</button>
+            <button class="btn">Following</button>
+            <button class="btn">Share profile</button>
+          </article>
+        </section>
+      </section>
+      <section class="post">
+        <ul class="tab-titles">
+          <li class="tab-title active">Shops</li>
+          <li class="tab-title">Sold</li>
+        </ul>
+        <ul class="post-content">
+          <li>
+            <article href="./product.html" class="post-card">
+              <img src="./pictures/outfit/image1.jpg" alt="outfit">
+              <h3>Outfit</h3>
+              <h4>50,000₮</h4>
+              <svg fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+              </svg>
+            </article>
+          </li>
+          <li>
+            <article href="./product.html" class="post-card">
+              <img src="./pictures/outfit/image2.jpg" alt="outfit">
+              <h3>Outfit</h3>
+              <h4>50,000₮</h4>
+              <svg fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+              </svg>
+            </article>
+          </li>
+          <li>
+            <article href="./product.html" class="post-card">
+              <img src="./pictures/outfit/image3.jpg" alt="outfit">
+              <h3>Outfit</h3>
+              <h4>50,000₮</h4>
+              <svg fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+              </svg>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </section>
+  <script src="./js/load-profile.js"></script>
+</body>
+
+</html>

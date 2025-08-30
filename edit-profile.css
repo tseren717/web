@@ -1,0 +1,102 @@
+/* edit-profile.css */
+
+/* 1. Position */
+#editProfileForm {
+  position: relative;
+  max-width: var(--max-width-5xl);
+  margin: var(--space-xl) auto;
+  padding: var(--space-lg);
+  border: var(--border-solid);
+  border-radius: var(--border-radius-md);
+  background-color: var(--card-color);
+}
+
+/* 2. Layout */
+#editProfileForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* 3. Box Model */
+#editProfileForm label {
+  background-color: transparent;
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+  color: var(--card-text-color);
+}
+
+#editProfileForm input[type="text"],
+#editProfileForm textarea,
+#editProfileForm input[type="file"] {
+  width: 100%;
+  padding: var(--space-sm);
+  border: var(--border-solid);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: var(--transition);
+}
+
+#editProfileForm input[type="text"]:focus,
+#editProfileForm textarea:focus,
+#editProfileForm input[type="file"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+#editProfileForm textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Preview container */
+#profilePicPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+#profilePicPreview img {
+  width: var(--avatar-lg);
+  height: var(--avatar-lg);
+  object-fit: cover;
+  border-radius: var(--border-radius-xl);
+  border: var(--border-solid);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Typography */
+#editProfileForm button[type="submit"] {
+  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: white;
+  font-weight: 600;
+  font-size: var(--font-size);
+  transition: var(--transition);
+}
+
+#editProfileForm button[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #editProfileForm {
+    padding: var(--space-md);
+    max-width: 100%;
+  }
+
+  #profilePicPreview img {
+    width: var(--mobile-avatar-lg);
+    height: var(--mobile-avatar-lg);
+  }
+}

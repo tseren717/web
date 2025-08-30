@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="edit-profile.css">
+
+</head>
+
+<body>
+  <form id="editProfileForm">
+    <label for="profilePic">Profile Picture</label>
+    <input type="file" id="profilePic" name="profilePic" accept="image/*">
+    <div id="profilePicPreview" style="margin: 10px 0;">
+      <img src="" alt="Profile Preview" id="previewImg" style="max-width: 150px; max-height: 150px; display:none; border-radius: 50%;">
+    </div>
+
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Full Name">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="@username">
+
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="bio" placeholder="Say something about yourself..."></textarea>
+
+    <button type="submit">Save Changes</button>
+  </form>
+  
+
+  <!-- JavaScript файлаа холбоно -->
+  <script src="./js/edit-profile.js"></script>
+</body>
+
+</html>
+
