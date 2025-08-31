@@ -1,99 +1,4 @@
-:root {
---font-main: 'Arial', sans-serif;
---color-bg: #ffffff;
---color-text:#222;
---color-accent: #1e3c72;
---header-bg: #1e3c72;
---spacing: 1rem;
---shadow: 0 4px 10px rgba(0,0,0,0.15);
---lh: 1.6;
---ls: 0.5px;
---transition: all 0.3s ease;
-}
-
-
-/* Dark Mode */
-:root.dark {
---color-bg: #121212;
---color-text: #eee;
---color-accent: #ffcc70;
-}
-
-
-/* Global Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-font-family: var(--font-main);
-background: var(--color-bg);
-color: var(--color-text);
-line-height: var(--lh);
-letter-spacing: var(--ls);
-transition: var(--transition);
-}
-
-.header-top-nav{
-    padding: var(--space-md) var(--space-lg);
-    border-bottom: var(--border-solid);
-    background-color: var(--primary-color);
-}
-.header-top{
-    display: flex;
-    align-items:center;
-    background-color: var(--primary-color);
-}
-.logo-container{
-    margin-right: var(--space-md);
-    background-color: var(--primary-color);
-}
-.logo {
-    font-weight: bold;      
-}
-.logo svg {
-    width: var(--header-font-size);
-    height: auto;
-    
-}
-.logo-text{
-    font-size: var(--header-font-size);
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.search-box {
-    color: black;
-    display: flex;
-    flex:1;
-    max-width: var(--search-box-size);
-    margin: auto;
-    border: var(--border-solid);
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    background-color: var(--searchbox-bg);
-}
-.search-box svg{
-    width: var(--search-svg-size);
-    height: auto;
-    padding: var(--space-xs) var(--space-sm);
-    fill: black;
-}
-.search-box input {
-    width: 100%;
-    height: 100%;
-    padding: var(--space-xs);  
-    border: none;
-    border-radius: var(--border-radius-md);
-}
-.search-box input:focus{
-    outline: none;
-}
-.icons{
-    margin-left: var(--space-lg);
-}
-.icons a svg{
-    width: var(--header-font-size);
-    height: auto;
-    background-color: var(--primary-color);
-}
+/* categories.css файл */
 
 /* Hero Section */
 .hero {
@@ -107,9 +12,10 @@ transition: var(--transition);
     font-weight: bold;
     padding: 0 1rem;
 }
+
 .hero h4 {
-  font-size: 2.5rem;
-  font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 /* Products Grid */
@@ -141,6 +47,11 @@ transition: var(--transition);
 
 .product-info {
     padding: 1rem;
+    justify-content: space-between;
+}
+
+.product-info div{
+    float:left;
 }
 
 .product-title {
@@ -159,6 +70,49 @@ transition: var(--transition);
     font-weight: bold;
     color: var(--color-accent);
     font-size: 1.2rem;
+}
+
+/* Cart болон Like товчлуур эффектүүд */
+.add-to-cart-icon {
+    float: right;
+    fill: var(--color-text);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.add-to-cart-icon:hover {
+    fill: var(--hover-color) !important;
+    transform: scale(1.1);
+}
+
+.add-to-cart-icon:active {
+    transform: scale(0.95);
+}
+
+.add-to-cart-icon.active {
+    fill: var(--hover-color) !important;
+}
+
+.add-to-like-icon {
+    float: right;
+    margin-right: 5px;
+    fill: var(--color-text);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.add-to-like-icon:hover {
+    fill: #ff4757 !important;
+    transform: scale(1.1);
+}
+
+.add-to-like-icon:active {
+    transform: scale(0.95);
+}
+
+.add-to-like-icon.active,
+.add-to-like-icon.liked {
+    fill: #ff4757 !important;
 }
 
 /* Filter Section */
@@ -186,10 +140,19 @@ transition: var(--transition);
     transition: all 0.3s ease;
 }
 
-.filter-option:hover, .filter-option.active {
+.filter-option:hover, 
+.filter-option.active {
     background: var(--color-accent);
     color: white;
     border-color: var(--color-accent);
+}
+
+/* Product Counter */
+.product-counter {
+    padding: 0.5rem 2rem;
+    background-color: var(--color-bg);
+    text-align: left;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -210,10 +173,6 @@ transition: var(--transition);
     color: #ccc;
 }
 
-:root.dark .breadcrumb {
-    background-color: #2a2a2a;
-}
-
 :root.dark .filter-section {
     background-color: #2a2a2a;
 }
@@ -223,12 +182,3 @@ transition: var(--transition);
     border-color: #444;
     color: #eee;
 }
-
-/* Product Counter */
-.product-counter {
-  padding: 0.5rem 2rem;
-  background-color: var(--color-bg);
-  text-align: left;
-  font-weight: bold;
-}
-
