@@ -32,8 +32,11 @@
   .post-card svg {
     width: 1.2em;
     float: right;
+    fill: var(--color-text);
   }
-  
+  .post-card svg:hover {
+    fill: var(--hover-color);
+  }
 
 .post-card:hover {
     transform: scale(1.05);
