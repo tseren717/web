@@ -66,6 +66,7 @@
 }
 .bio{
     margin-top: var(--space-md);
+    border-bottom: 1px solid var(--border-color);
 }
 .follow-container{
     display: flex;
