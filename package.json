@@ -1,6 +1,7 @@
 {
   "name": "web-1",
   "version": "1.0.0",
+  "type": "module",
   "description": "\u0000 \u0000",
   "main": "index.js",
   "scripts": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/tseren717/web#readme",
   "dependencies": {
+    "@supabase/supabase-js": "^2.56.1",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"

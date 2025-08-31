@@ -1,27 +1,7 @@
-// Login
-async function login(username, password) {
-  const res = await fetch("http://localhost:5000/api/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username, password })
-  });
-  const data = await res.json();
-  console.log(data);
-}
+// supabase client import
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
-// Load products
-async function loadProducts() {
-  const res = await fetch("http://localhost:5000/api/products");
-  const products = await res.json();
-  console.log(products);
-}
+const SUPABASE_URL = 'https://osquztvfekgnuwpzniwb.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9zcXV6dHZmZWtnbnV3cHpuaXdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY2Mjc2NDcsImV4cCI6MjA3MjIwMzY0N30.M9BLEDg-ynJ2rhQO5BUWES0Dunnov0rCqoXxlNCkguQ';
 
-// Жишээ дуудлага
-login("test", "123");
-loadProducts();
-
-
-fetch("http://localhost:5000/api/products")
-  .then(res => res.json())
-  .then(data => console.log(data));
-
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);

@@ -1,1 +1,16 @@
-[]
+[
+    {
+        "name": "Jacket 1",
+        "description": "Warm and cozy jacket",
+        "price": 120,
+        "image": "pictures/category/jacket/1.jpg",
+        "category": "jacket"
+    },
+    {
+        "name": "Jacket 2",
+        "description": "Waterproof winter jacket",
+        "price": 150,
+        "image": "pictures/category/jacket/2.jpg",
+        "category": "jacket"
+    }  
+]
