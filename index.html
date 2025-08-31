@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="mn">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>e-thrift</title>
   <link rel="stylesheet" href="global.css" />
   <link rel="stylesheet" href="header.css">
-
 </head>
-
 <body>
   <!-- Header Section -->
   <header class="header-top-nav">
@@ -54,6 +51,12 @@
                     </svg>
                 </a>
             </li>
+            <!--Toggle icon-->
+            <li class="icons" id="theme-toggle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-toggles" viewBox="0 0 16 16">
+                <path d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m2.45 0A3.5 3.5 0 0 1 8 3.5 3.5 3.5 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7"/>
+              </svg>
+            </li>
         </ul>
     </header>
 
@@ -61,8 +64,6 @@
   <section class="hero">
     <h4>Хямд үнэ, чанартай сонголт</h4>
   </section>
-
-
   <section id="outfit">
     <div class="slider">
       <div class="item" style="--position:1; --quantity:10;"><img src="pictures/outfit/image1.jpg" alt="look 1"></div>
@@ -77,7 +78,6 @@
       <div class="item" style="--position:10; --quantity:10;"><img src="pictures/outfit/image1.jpg" alt="look 10"></div>
     </div>
   </section>
-
   <!-- Shop by Category Section -->
   <section class="categories">
     <h4>Ангилал</h4>
@@ -134,9 +134,40 @@
   </section>
 
   <!-- Footer -->
+     <!-- Footer Section -->
   <footer class="footer">
-    <p>© 2025 Thrift Shop.</p>
+    <div class="footer-container">
+      <!-- Холбоо барих -->
+      <div class="footer-col">
+        <h4>Холбоо барих</h4>
+        <p><a href="tel:+976 88468766">Утас: (+976) 88468766</a></p>
+        <p><a href="mailto: jvneejk@gmail.com">И-мэйл: jvneejk@gmail.com</a></p>
+        <p><a href="facebook.com">Facebook</a></p>
+      </div>
+
+      <!-- Хаяг -->
+      <div class="footer-col">
+        <h4>Хаяг</h4>
+        <p>Улаанбаатар хот, Сүхбаатар дүүрэг,<br>
+           Оюутны гудамж 14/3,МУИС-ийн 7,8-р байр<br> </p>
+      </div>
+
+      <!-- Тусламж -->
+      <div class="footer-col">
+        <h4>Тусламж</h4>
+        <ul>
+          <li><a href="#">Түгээмэл асуултууд</a></li>
+          <li><a href="#">Хүргэлтийн нөхцөл</a></li>
+          <li><a href="#">Буцаалт, солилцоо</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Thrift Shop. Бүх эрх хуулиар хамгаалагдсан.</p>
+    </div>
   </footer>
+
 
   <script>
     // Dark/Light toggle

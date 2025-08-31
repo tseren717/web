@@ -220,3 +220,56 @@ body {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
+
+.footer {
+  background-color: var(--primary-color); /* header-тэй адил өнгө */
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer h4 {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.footer p,
+.footer a,
+.footer li {
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #ddd;
+}

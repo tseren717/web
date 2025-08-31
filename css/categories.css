@@ -31,63 +31,68 @@ letter-spacing: var(--ls);
 transition: var(--transition);
 }
 
-/* Header */
-.header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: var(--spacing);
-background: var(--header-bg);
+.header-top-nav{
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: var(--border-solid);
+    background-color: var(--primary-color);
 }
- .logo span {
-  color: #fff !important;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-shadow: 0 0 6px rgba(0,0,0,0.4);
+.header-top{
+    display: flex;
+    align-items:center;
+    background-color: var(--primary-color);
 }
-
-
-/* Search Bar */
-.search-container {
-  flex: 1;
-  max-width: 400px;
-  margin: 0 2rem;
-  position: relative;
+.logo-container{
+    margin-right: var(--space-md);
+    background-color: var(--primary-color);
 }
-
-.search-container input {
-  width: 100%;
-  padding: 0.5rem 2.5rem 0.5rem 1rem; /* icon зайтай */
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
+.logo {
+    font-weight: bold;      
+}
+.logo svg {
+    width: var(--header-font-size);
+    height: auto;
+    
+}
+.logo-text{
+    font-size: var(--header-font-size);
+    background-color: var(--primary-color);
+    color: white;
 }
 
-.search-container .search-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  color: #555;
-  cursor: pointer;
+.search-box {
+    color: black;
+    display: flex;
+    flex:1;
+    max-width: var(--search-box-size);
+    margin: auto;
+    border: var(--border-solid);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    background-color: var(--searchbox-bg);
 }
-
-/* Header Right Icons */
-.header-icons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.search-box svg{
+    width: var(--search-svg-size);
+    height: auto;
+    padding: var(--space-xs) var(--space-sm);
+    fill: black;
 }
-
-.header-icons .icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
-  padding: 0.3rem;
-  border-radius: 50%;
-  transition: var(--transition);
+.search-box input {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-xs);  
+    border: none;
+    border-radius: var(--border-radius-md);
+}
+.search-box input:focus{
+    outline: none;
+}
+.icons{
+    margin-left: var(--space-lg);
+}
+.icons a svg{
+    width: var(--header-font-size);
+    height: auto;
+    background-color: var(--primary-color);
 }
 
 /* Hero Section */
