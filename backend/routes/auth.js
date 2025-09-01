@@ -1,27 +1,48 @@
-const express = require("express");
-const fs = require("fs");
-const router = express.Router();
-const path = "./data/users.json";
+import express from 'express'
+import { signup, login, logout, getCurrentUser } from '../backend/service/loginService.js'
+
+const router = express.Router()
 
 // Signup
-router.post("/signup", (req, res) => {
-  const { username, password } = req.body;
-  const users = JSON.parse(fs.readFileSync(path));
-  if (users.find(u => u.username === username)) {
-    return res.status(400).json({ msg: "User exists" });
+router.post('/signup', async (req, res) => {
+  const { email, password } = req.body
+  try {
+    const data = await signup(email, password)
+    res.json(data)
+  } catch (err) {
+    res.status(400).json({ error: err.message })
   }
-  users.push({ username, password });
-  fs.writeFileSync(path, JSON.stringify(users, null, 2));
-  res.json({ msg: "Signup successful" });
-});
+})
 
 // Login
-router.post("/login", (req, res) => {
-  const { username, password } = req.body;
-  const users = JSON.parse(fs.readFileSync(path));
-  const user = users.find(u => u.username === username && u.password === password);
-  if (!user) return res.status(401).json({ msg: "Invalid credentials" });
-  res.json({ msg: "Login successful", username: user.username });
-});
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body
+  try {
+    const data = await login(email, password)
+    res.json(data)
+  } catch (err) {
+    res.status(400).json({ error: err.message })
+  }
+})
 
-module.exports = router;
+// Logout
+router.post('/logout', async (req, res) => {
+  try {
+    await logout()
+    res.json({ message: 'Logged out successfully' })
+  } catch (err) {
+    res.status(400).json({ error: err.message })
+  }
+})
+
+// Current user
+router.get('/me', async (req, res) => {
+  try {
+    const user = await getCurrentUser()
+    res.json(user)
+  } catch (err) {
+    res.status(400).json({ error: err.message })
+  }
+})
+
+export default router

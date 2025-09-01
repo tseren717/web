@@ -1,9 +1,9 @@
-// Dark/Light toggle
-const toggleBtn = document.getElementById('theme-toggle');
-toggleBtn.addEventListener('click', () => {
-document.documentElement.classList.toggle('dark');
-});
 
+// Dark/Light toggle
+    const toggleBtn = document.getElementById('theme-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
 
 // Бүтээгдэхүүний тоолуур
 function updateProductCounter() {

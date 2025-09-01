@@ -1,18 +1,36 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-
-const authRoutes = require("./routes/auth");
-const productRoutes = require("./routes/products");
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import { sign } from 'crypto';
+import signupRoutes from './routes/signup.js';
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.use("/api/auth", authRoutes);
-app.use("/api/products", productRoutes);
+// Serve static files from the frontend directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendPath = path.join(__dirname, '../frontend/pages');
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.get("/", (req, res) => res.send("Server is working!"));
+app.use('/api', signupRoutes);
+// app.use('/api/login', loginRoutes);
+
+// History fallback for SPA (must come AFTER API routes, BEFORE static)
+app.use(
+  history({
+    index: '/index.html',
+    rewrites: [
+      { from: /^\/api\/.*$/, to: (context) => context.parsedUrl.pathname }, // Don't rewrite API calls
+    ],
+  })
+);
+
+// Static files
+app.use(express.static(frontendPath));
+
+
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
+});
