@@ -10,6 +10,7 @@
 .profile-section{
     margin:0 var(--space-md);
     max-width: var( --max-width-5xl);
+    padding-top: 55px;
 }
 .profile-header{
     display:flex;

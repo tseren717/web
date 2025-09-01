@@ -1,6 +1,11 @@
 /* header.css файл */
 
 .header-top-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     padding: var(--space-md) var(--space-lg);
     border-bottom: var(--border-solid);
     background-color: var(--primary-color);
