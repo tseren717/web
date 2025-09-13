@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-thrift</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../css/header.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header-top-nav">
+        <ul class="header-top">
+            <!--Logo container-->
+            <li class="logo-container">
+                <a class="logo" href="./login_index.html">
+                    <span class="logo-text">Thrift Shop</span>
+                </a>
+            </li>
+            <!--Search container-->
+            <li class="search-box">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018" />
+                    <path
+                        d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+                </svg>
+                <input type="text" placeholder="Search...">
+            </li>
+            <li class="icons">
+                <a href="login.html">
+                    <svg fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                </a>
+            </li>
+            <!--Heart icon-->
+            <li class="icons">
+                <a href="">
+                    <svg fill="currentColor" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </a>
+            </li>
+            <!--Avatar icon-->
+            <li class="icons">
+                <a href="profile.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-bag-dash-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M6 9.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z" />
+                    </svg>
+                </a>
+            </li>
+            <!--Toggle icon-->
+            <li class="icons" id="theme-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-toggles"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4.5 9a3.5 3.5 0 1 0 0 7h7a3.5 3.5 0 1 0 0-7zm7 6a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m-7-14a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5m2.45 0A3.5 3.5 0 0 1 8 3.5 3.5 3.5 0 0 1 6.95 6h4.55a2.5 2.5 0 0 0 0-5zM4.5 0h7a3.5 3.5 0 1 1 0 7h-7a3.5 3.5 0 1 1 0-7" />
+                </svg>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h4>Хямд үнэ, чанартай сонголт</h4>
+    </section>
+    <section id="outfit">
+        <div class="slider">
+            <div class="item" style="--position:1; --quantity:10;"><img src="../pictures/outfit/image1.jpg"
+                    alt="look 1"></div>
+            <div class="item" style="--position:2; --quantity:10;"><img src="../pictures/outfit/image2.jpg"
+                    alt="look 2"></div>
+            <div class="item" style="--position:3; --quantity:10;"><img src="../pictures/outfit/image3.jpg"
+                    alt="look 3"></div>
+            <div class="item" style="--position:4; --quantity:10;"><img src="../pictures/outfit/image4.jpg"
+                    alt="look 4"></div>
+            <div class="item" style="--position:5; --quantity:10;"><img src="../pictures/outfit/image5.jpg"
+                    alt="look 5"></div>
+            <div class="item" style="--position:6; --quantity:10;"><img src="../pictures/outfit/image6.jpg"
+                    alt="look 6"></div>
+            <div class="item" style="--position:7; --quantity:10;"><img src="../pictures/outfit/image7.jpg"
+                    alt="look 7"></div>
+            <div class="item" style="--position:8; --quantity:10;"><img src="../pictures/outfit/image8.jpg"
+                    alt="look 8"></div>
+            <div class="item" style="--position:9; --quantity:10;"><img src="../pictures/outfit/image9.jpg"
+                    alt="look 9"></div>
+            <div class="item" style="--position:10; --quantity:10;"><img src="../pictures/outfit/image1.jpg"
+                    alt="look 10"></div>
+        </div>
+    </section>
+    <!-- Shop by Category Section -->
+    <section class="categories">
+        <h4>Ангилал</h4>
+        <div class="category-grid">
+            <div class="category-item">
+                <a href="jacket.html">
+                    <img src="../pictures/category/jacket.jpg" alt="jacket">
+                    <p>Гадуур хувцас</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="top.html">
+                    <img src="../pictures/category/tsmts.jpg" alt="tsamts">
+                    <p>Цамц</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="bottom.html">
+                    <img src="../pictures/category/umd.jpg" alt="umd">
+                    <p>Өмд</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="footwear.html">
+                    <img src="../pictures/category/gutal.jpg" alt="gutal">
+                    <p>Гутал</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="backpack.html">
+                    <img src="../pictures/category/brand.jpg" alt="brand">
+                    <p>Үүргэвч</p>
+                </a>
+            </div>
+            <div class="category-item">
+                <a href="others.html">
+                    <img src="../pictures/category/busad.jpg" alt="busad">
+                    <p>Бусад</p>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="map">
+        <h2>Дэлгүүрийн байршил</h2>
+        <div>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d265.2808683695647!2d106.92847771537578!3d47.91967945398042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9693143a161c81%3A0xf1074a216491906d!2sNational%20University%20of%20Mongolia!5e0!3m2!1sen!2smn!4v1742997311296!5m2!1sen!2smn"
+                style="border:0;" allowfullscreen="" ; referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- contact -->
+            <div class="footer-col">
+                <h4>Холбоо барих</h4>
+                <p><a href="tel:+976 88468766">Утас: (+976) 88468766</a></p>
+                <p><a href="mailto: jvneejk@gmail.com">И-мэйл: jvneejk@gmail.com</a></p>
+                <p><a href="facebook.com">Facebook</a></p>
+            </div>
+
+            <!-- location -->
+            <div class="footer-col">
+                <h4>Хаяг</h4>
+                <p>Улаанбаатар хот, Сүхбаатар дүүрэг,<br>
+                    Оюутны гудамж 14/3,МУИС-ийн 7,8-р байр<br> </p>
+            </div>
+
+            <!-- helping -->
+            <div class="footer-col">
+                <h4>Тусламж</h4>
+                <ul>
+                    <li><a href="#">Түгээмэл асуултууд</a></li>
+                    <li><a href="#">Хүргэлтийн нөхцөл</a></li>
+                    <li><a href="#">Буцаалт, солилцоо</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Thrift Shop. Бүх эрх хуулиар хамгаалагдсан.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Dark/Light toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+
+</html>
