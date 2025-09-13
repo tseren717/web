@@ -88,25 +88,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Profile link click with cart data
+  // Profile link click with cart data - ЗАСВАРЛАВ!
   const profileLink = document.getElementById('profile-link');
   if (profileLink) {
     profileLink.addEventListener('click', function (e) {
       e.preventDefault();
 
-      // Store cart data for profile page
+      // Store cart and like data for profile page
       const cartData = {
         items: cartItems,
         count: cartItems.length,
         timestamp: Date.now()
       };
 
+      const likeData = {
+        items: likedItems,
+        count: likedItems.length,
+        timestamp: Date.now()
+      };
+
       // Since we can't use localStorage, we'll use URL parameters
       const params = new URLSearchParams();
-      params.set('cart', cartItems.length);
+      params.set('cart', JSON.stringify(cartItems));
+      params.set('likes', JSON.stringify(likedItems));
+      
+      console.log('Navigating to profile page with data:', { cartItems, likedItems });
 
-      // Navigate to profile page
-      window.location.href = `../profile.html?${params.toString()}`;
+      // Navigate to profile page - ЭНД л зөв!
+      window.location.href = `profile.html?${params.toString()}`;
     });
   }
 
@@ -227,13 +236,5 @@ window.clearLikes = function () {
   });
 };
 
-const profileLink = document.getElementById('profile-link');
-if (profileLink) {
-  profileLink.addEventListener('click', function(e) {
-    e.preventDefault();
-    const params = new URLSearchParams();
-    params.set('cart', JSON.stringify(cartItems));
-    params.set('likes', JSON.stringify(likedItems));
-    window.location.href = `../profile.html?${params.toString()}`;
-  });
-}
+// ЭНДЭЭС ДООШ ТЭР ДАВХАРДСАН КОДЫГ УСТГАЛАА!
+// Учир нь дээр profile link handler аль хэдийн зөв бичигдсэн байна.

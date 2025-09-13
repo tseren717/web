@@ -76,6 +76,7 @@
 }
 
 .icons a svg{
+    position: relative;
     width: var(--header-font-size);
     height: auto;
     background-color: var(--primary-color);
@@ -85,6 +86,7 @@
 .profile-icon-wrapper {
     position: relative;
     display: inline-block;
+    z-index: 100;
 }
 
 /* Cart Badge - header navigation дээрх badge */
