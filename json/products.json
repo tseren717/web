@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "35",
+      "name": "NIKE SPORT SHORTS",
+      "price": 149000,
+      "image": "../pictures/category/tsunh/41.jpg",
+      "alt": "NIKE SPORT SHORTS",
+      "category": "үүргэвч"
+    },
+    {
+      "id": "36", 
+      "name": "TOMMY HILFIGER SPORT SHORTS",
+      "price": 124000,
+      "image": "../pictures/category/tsunh/42.jpg",
+      "alt": "TOMMY HILFIGER SPORT SHORTS",
+      "category": "үүргэвч"
+    },
+    {
+      "id": "37",
+      "name": "UNDER ARMOUR CARGO SHORTS", 
+      "price": 124000,
+      "image": "../pictures/category/tsunh/43.jpg",
+      "alt": "UNDER ARMOUR CARGO SHORTS",
+      "category": "үүргэвч"
+    },
+    {
+      "id": "38",
+      "name": "BASKETBALL NIKE SPORT SHORTS",
+      "price": 173000,
+      "image": "../pictures/category/tsunh/44.jpg", 
+      "alt": "BASKETBALL NIKE SPORT SHORTS",
+      "category": "үүргэвч"
+    },
+    {
+      "id": "39",
+      "name": "BASKETBALL NIKE SPORT SHORTS",
+      "price": 173000,
+      "image": "../pictures/category/tsunh/45.jpg",
+      "alt": "BASKETBALL NIKE SPORT SHORTS", 
+      "category": "үүргэвч"
+    },
+    {
+      "id": "40",
+      "name": "BASKETBALL NIKE SPORT SHORTS",
+      "price": 173000,
+      "image": "../pictures/category/tsunh/46.jpg",
+      "alt": "BASKETBALL NIKE SPORT SHORTS",
+      "category": "үүргэвч"
+    }
+  ]
+}

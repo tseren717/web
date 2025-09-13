@@ -88,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Profile link click with cart data - ЗАСВАРЛАВ!
   const profileLink = document.getElementById('profile-link');
   if (profileLink) {
     profileLink.addEventListener('click', function (e) {
@@ -114,7 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
       
       console.log('Navigating to profile page with data:', { cartItems, likedItems });
 
-      // Navigate to profile page - ЭНД л зөв!
       window.location.href = `profile.html?${params.toString()}`;
     });
   }
@@ -235,6 +233,3 @@ window.clearLikes = function () {
     icon.style.fill = '';
   });
 };
-
-// ЭНДЭЭС ДООШ ТЭР ДАВХАРДСАН КОДЫГ УСТГАЛАА!
-// Учир нь дээр profile link handler аль хэдийн зөв бичигдсэн байна.
