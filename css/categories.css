@@ -93,28 +93,120 @@
     fill: var(--hover-color) !important;
 }
 
+/* categories.css файл */
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.hero h4 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 4rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product-info {
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.product-info div {
+  float: left;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.product-details {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-weight: bold;
+  color: var(--color-accent);
+  font-size: 1.2rem;
+}
+/* Cart болон Like товчлуур эффектүүд */
+.add-to-cart-icon {
+  float: right;
+  fill: var(--color-text);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.add-to-cart-icon:hover {
+  fill: var(--hover-color) !important;
+  transform: scale(1.1);
+}
+
+.add-to-cart-icon:active {
+  transform: scale(0.95);
+}
+
+.add-to-cart-icon.active {
+  fill: var(--hover-color) !important;
+}
+
 .add-to-like-icon {
-    float: right;
-    margin-right: 5px;
-    fill: var(--color-text);
-    transition: all 0.3s ease;
-    cursor: pointer;
+  float: right;
+  margin-right: 5px;
+  fill: var(--color-text);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .add-to-like-icon:hover {
-    fill: #ff4757 !important;
-    transform: scale(1.1);
+  fill: #ff4757 !important;
+  transform: scale(1.1);
 }
 
 .add-to-like-icon:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .add-to-like-icon.active,
 .add-to-like-icon.liked {
-    fill: #ff4757 !important;
+  fill: #ff4757 !important;
 }
-
 /* Filter Section */
 .filter-section {
     padding: 1rem 2rem;

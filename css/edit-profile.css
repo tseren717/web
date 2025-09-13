@@ -1,10 +1,12 @@
 /* edit-profile.css */
 
 /* 1. Position */
+
 #editProfileForm {
   position: relative;
   max-width: var(--max-width-5xl);
   margin: var(--space-xl) auto;
+  margin-top: 100px;
   padding: var(--space-lg);
   border: var(--border-solid);
   border-radius: var(--border-radius-md);

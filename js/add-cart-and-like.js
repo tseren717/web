@@ -15,52 +15,76 @@ function updateCartCounter() {
   }
 }
 
+// Update like counter (heart icon in header)
+function updateLikeCounter() {
+  const heartCounter = document.getElementById('like-counter');
+  const count = likedItems.length;
+
+  if (count > 0) {
+    heartCounter.textContent = count;
+    heartCounter.style.display = 'flex';
+  } else {
+    heartCounter.style.display = 'none';
+  }
+}
+
 // Initialize functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function () {
 
   // Handle bag icon clicks (add to cart)
   const cartIcons = document.querySelectorAll('.add-to-cart-icon');
-cartIcons.forEach(icon => {
-  icon.addEventListener('click', function (e) {
-    e.preventDefault();
-    const productId = this.getAttribute('data-product-id');
-    const productCard = this.closest('.product-card');
-    const price = productCard.getAttribute('data-price');
-    const name = productCard.querySelector('.product-image').alt;
+  cartIcons.forEach(icon => {
+    icon.addEventListener('click', function (e) {
+      e.preventDefault();
+      const productId = this.getAttribute('data-product-id');
+      const productCard = this.closest('.product-card');
+      const price = productCard.getAttribute('data-price');
+      const name = productCard.querySelector('.product-image').alt;
 
-    // Check if product already in cart
-    const index = cartItems.findIndex(item => item.id === productId);
-    if (index === -1) {
-      // Add to cart
-      cartItems.push({ id: productId, name, price });
-      this.classList.add('active');
-      this.style.fill = '#2ce6e3';
-    } else {
-      // Remove from cart
-      cartItems.splice(index, 1);
-      this.classList.remove('active');
-      this.style.fill = '';
-    }
+      // Check if product already in cart
+      const index = cartItems.findIndex(item => item.id === productId);
+      if (index === -1) {
+        // Add to cart
+        cartItems.push({ id: productId, name, price });
+        this.classList.add('active');
+        this.style.fill = '#2ce6e3';
+      } else {
+        // Remove from cart
+        cartItems.splice(index, 1);
+        this.classList.remove('active');
+        this.style.fill = '';
+      }
 
-    updateCartCounter();
+      updateCartCounter();
+    });
   });
-});
 
-
-  // Handle heart icon clicks (like)
+  // Handle heart icon clicks (like) - UPDATED WITH COUNTER
   const likeIcons = document.querySelectorAll('.add-to-like-icon');
   likeIcons.forEach(icon => {
     icon.addEventListener('click', function (e) {
       e.preventDefault();
       const productId = this.getAttribute('data-product-id');
+      const productCard = this.closest('.product-card');
+      const price = productCard.getAttribute('data-price');
+      const name = productCard.querySelector('.product-image').alt;
 
-      if (!likedItems.includes(productId)) {
-        likedItems.push(productId);
+      // Check if product already liked
+      const index = likedItems.findIndex(item => item.id === productId);
+      if (index === -1) {
+        // Add to liked items
+        likedItems.push({ id: productId, name, price });
         this.classList.add('liked');
+        this.style.fill = '#ff4757'; // Red color for liked items
       } else {
-        likedItems = likedItems.filter(item => item !== productId);
+        // Remove from liked items
+        likedItems.splice(index, 1);
         this.classList.remove('liked');
+        this.style.fill = '';
       }
+
+      // Update the heart counter in header
+      updateLikeCounter();
     });
   });
 
@@ -109,6 +133,20 @@ cartIcons.forEach(icon => {
         console.log('Cart cleared!');
       }
     }
+
+    // Press Ctrl+L to clear liked items
+    if (e.key === 'l' || e.key === 'L') {
+      if (e.ctrlKey && likedItems.length > 0) {
+        likedItems = [];
+        updateLikeCounter();
+        // Reset all like icon colors
+        likeIcons.forEach(icon => {
+          icon.classList.remove('liked');
+          icon.style.fill = '';
+        });
+        console.log('Liked items cleared!');
+      }
+    }
   });
 
   // Auto-save cart state (session only)
@@ -122,8 +160,8 @@ cartIcons.forEach(icon => {
 
 // Export functions for external use
 window.addToCart = function (productId) {
-  if (!cartItems.includes(productId)) {
-    cartItems.push(productId);
+  if (!cartItems.find(item => item.id === productId)) {
+    cartItems.push({ id: productId });
     updateCartCounter();
     return true;
   }
@@ -131,7 +169,7 @@ window.addToCart = function (productId) {
 };
 
 window.removeFromCart = function (productId) {
-  const index = cartItems.indexOf(productId);
+  const index = cartItems.findIndex(item => item.id === productId);
   if (index > -1) {
     cartItems.splice(index, 1);
     updateCartCounter();
@@ -140,8 +178,31 @@ window.removeFromCart = function (productId) {
   return false;
 };
 
+window.addToLikes = function (productId) {
+  if (!likedItems.find(item => item.id === productId)) {
+    likedItems.push({ id: productId });
+    updateLikeCounter();
+    return true;
+  }
+  return false;
+};
+
+window.removeFromLikes = function (productId) {
+  const index = likedItems.findIndex(item => item.id === productId);
+  if (index > -1) {
+    likedItems.splice(index, 1);
+    updateLikeCounter();
+    return true;
+  }
+  return false;
+};
+
 window.getCartItems = function () {
   return [...cartItems];
+};
+
+window.getLikedItems = function () {
+  return [...likedItems];
 };
 
 window.clearCart = function () {
@@ -155,11 +216,24 @@ window.clearCart = function () {
   });
 };
 
-const profileLink = document.getElementById('profile-link');
-profileLink.addEventListener('click', function(e) {
-  e.preventDefault();
-  const params = new URLSearchParams();
-  params.set('cart', JSON.stringify(cartItems));
-  window.location.href = `../profile.html?${params.toString()}`;
-});
+window.clearLikes = function () {
+  likedItems = [];
+  updateLikeCounter();
+  // Reset all like icon colors
+  const likeIcons = document.querySelectorAll('.add-to-like-icon');
+  likeIcons.forEach(icon => {
+    icon.classList.remove('liked');
+    icon.style.fill = '';
+  });
+};
 
+const profileLink = document.getElementById('profile-link');
+if (profileLink) {
+  profileLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    const params = new URLSearchParams();
+    params.set('cart', JSON.stringify(cartItems));
+    params.set('likes', JSON.stringify(likedItems));
+    window.location.href = `../profile.html?${params.toString()}`;
+  });
+}
